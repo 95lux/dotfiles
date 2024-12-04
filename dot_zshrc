@@ -1,0 +1,58 @@
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _complete _ignored
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle :compinstall filename '/home/jonas/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+#bindkey -v
+bindkey "^[[1;5D" backward-word
+bindkey -e
+bindkey "^[[1;5C" forward-word
+
+PROMPT='%F{012}%~ %F{014}ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ» %f'
+
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias open='nohup nautilus . > /dev/null 2>&1 &' 
+alias idea='nohup idea . > /dev/null 2>&1 &' 
+alias vim='lvim'
+alias gtkwave='GDK_BACKEND=x11 gtkwave'
+alias cop='codium .'
+
+source ~/.zsh/LS_COLORS/lscolors.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/git-prompt/git-prompt.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+#source /usr/share/nvm/init-nvm.sh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+export RACK_DIR=~/Rack-SDK
+export TERMINAL=/usr/bin/alacritty
+# export PATH="/opt/fpga-toolchain/bin:$PATH"
+export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
+export PATH="$PATH:/home/jonas/.local/bin"
+export PATH="$PATH:/home/jonas/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin"
+export PATH="/opt/riscv/bin:$PATH"
+export PATH="$PATH:/home/jonas/essent/utils/bin"
+
+
+export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
+export XDG_CURRENT_DESKTOP="Hyprland"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/libgnat-14.so
+# End of lines configured by zsh-newuser-install
+
+
+
+
+
